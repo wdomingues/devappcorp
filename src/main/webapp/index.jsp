@@ -2,12 +2,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
+    <title>JSP - Alô Mundo - Session</title>
 </head>
 <body>
-<h1><%= "Hello World!" %>
+<h1>
+    <%
+        Object msg = session.getAttribute("msg");
+        if (msg == null) msg = "Alô, mundo!";
+    %>
+    <%= msg %>
 </h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+<a href="AloMundoServlet">Alô Mundo Servlet</a>
 </body>
 </html>
