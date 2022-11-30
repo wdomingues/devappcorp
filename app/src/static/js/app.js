@@ -55,9 +55,6 @@ function TodoListCard() {
             {items.length === 0 && (
                 <p className="text-center">Você ainda não tem itens TODO! Adicione um acima!</p>
             )}
-            {
-                (<h6 className="text-center">Modificado por Winne Domingues</h6>)
-            }
             {items.map(item => (
                 <ItemDisplay
                     item={item}
@@ -66,6 +63,7 @@ function TodoListCard() {
                     onItemRemoval={onItemRemoval}
                 />
             ))}
+            {(<h6 className="text-center">Modificado por Winne Domingues</h6>)}
         </React.Fragment>
     );
 }
